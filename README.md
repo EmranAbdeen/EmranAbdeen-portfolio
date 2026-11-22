@@ -1,59 +1,70 @@
-# Portfolio
+# Emran Abdeen Portfolio
+ 
+Welcome to my personal portfolio repository! This website showcases my skills, projects, professional experience, and educational journey as a Software Engineer and Full Stack .NET Developer.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.29.
+## 🌟 Project Overview
+ 
+This portfolio is designed and developed to present my work and achievements in an interactive and modern way. It offers a comprehensive look at my capabilities, specifically focusing on my expertise in the .NET ecosystem and web development.
 
-## Development server
+## 📂 Sections
+ 
+The website consists of the following sections:
 
-To start a local development server, run:
+1. **Home:** A welcoming introduction with social media links and quick actions.
+2. **About:** Personal introduction and professional background.
+3. **Skills:** A tailored display of my technical proficiency in Languages, Frameworks, Databases, and Web Technologies (e.g., C#, ASP.NET Core, SQL Server).
+4. **Projects:** Highlighting key projects such as:
+   * **ClinicHub:** A comprehensive clinic management system.
+5. **Education:** Details of my academic background at The Hashemite University.
+6. **Experience:** My professional history and internships.
+7. **Contact:** Contact information and links to my professional profiles.
 
-```bash
-ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ✨ Key Features
+ 
+* **Responsive Design:** Fully compatible with all devices (Desktop, Tablet, and Mobile).
+* **Dark & Light Mode:** Seamless toggle between themes for user comfort.
+* **Interactive UI:** Smooth animations (AOS) and easy navigation between sections.
+* **Project Showcases:** Interactive popups/modals to display project details, including images and videos.
+* **CV Download:** Direct access to view and download my Curriculum Vitae.
+* **Contact Section:** Multiple ways to get in touch with me.
 
-## Code scaffolding
+## 🛠️ Tech Stack
+ 
+This project is built using:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* Angular
+* TypeScript
+* HTML5 & CSS3 / SCSS
+* Bootstrap 5 (for responsive layout and styling)
+* AOS Library (for scroll animations)
+* Bootstrap Icons
 
-```bash
-ng generate component component-name
-```
+## 🚀 How to Run
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. Clone the repository:
 
-```bash
-ng generate --help
-```
+   ```bash
+   git clone https://github.com/EmranAbdeen/EmranAbdeen-portfolio.git
+   cd EmranAbdeen-portfolio
+   ```
 
-## Building
+2. Install dependencies:
 
-To build the project run:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng build
-```
+3. Start the development server:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+   ```bash
+   ng serve
+   ```
 
-## Running unit tests
+4. Open `http://localhost:4200` in your browser.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📬 Contact Me
+ 
+* **LinkedIn:** [Emran Abdeen](https://www.linkedin.com/in/emran-abdeen)
+* **GitHub:** [EmranAbdeen](https://github.com/EmranAbdeen)
+* **Email:** [emranabdeen2003@gmail.com](mailto:emranabdeen2003@gmail.com)
