@@ -1,0 +1,118 @@
+<div
+  class="modal fade"
+  id="projectModal"
+  #projectModal
+  tabindex="-1"
+  aria-labelledby="projectModalLabel"
+  aria-hidden="true"
+  (click)="closeModal()"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">
+          <i class="bi bi-code-slash me-2"></i>
+          {{ project?.Title || 'Project Details' }}
+        </h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <div id="projectCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <!-- Slide 1: Overview -->
+            <div class="carousel-item active">
+              <h5 class="mb-3">Project Overview</h5>
+              <p style="white-space: pre-line">{{ project?.Overview || project?.Description }}</p>
+              @if (project?.ProblemStatement) {
+                <h6 class="mt-4">Problem Statement</h6>
+                <p style="white-space: pre-line">{{ project?.ProblemStatement }}</p>
+              }
+            </div>
+
+            <!-- Slide 2: Demo -->
+            <div class="carousel-item">
+              <h5 class="mb-3">Project Demo</h5>
+              <div class="ratio ratio-16x9">
+                @if (project?.Video) {
+                  <video #projectVideo muted playsinline controls>
+                    <source [src]="project?.Video" type="video/mp4" />
+                    Your browser does not support video.
+                  </video>
+                } @else {
+                  <p>No demo video available for this project.</p>
+                }
+              </div>
+            </div>
+
+            <!-- Slide 3: Key Features -->
+            <div class="carousel-item">
+              <h5 class="mb-3">Key Features</h5>
+              @if (project?.KeyFeatures?.length) {
+                <ul class="feature-list">
+                  @for (feature of project?.KeyFeatures; track feature) {
+                    <li>{{ feature }}</li>
+                  }
+                </ul>
+              } @else {
+                <p>No key features available for this project.</p>
+              }
+            </div>
+
+            <!-- Slide 4: Technologies -->
+            <div class="carousel-item">
+              <h5 class="mb-4">Technologies & Skills</h5>
+              <div class="row g-4">
+                @for (skill of project?.Skills || []; track skill.Id) {
+                  <div class="col-12">
+                    <h6 class="mb-3">
+                      @if (skill.Icon) {
+                        <i [class]="skill.Icon + ' me-2'"></i>
+                      }
+                      {{ skill.Category }}
+                    </h6>
+                    <div class="technology-list" role="list">
+                      @for (tech of skill.Technologies; track tech) {
+                        <span class="technology-tag" role="listitem">{{ tech }}</span>
+                      }
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Navigation -->
+          <div class="carousel-navigation">
+            <button
+              type="button"
+              class="carousel-navigation__btn"
+              data-bs-target="#projectCarousel"
+              data-bs-slide="prev"
+              aria-label="Previous slide"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button
+              type="button"
+              class="carousel-navigation__btn"
+              data-bs-target="#projectCarousel"
+              data-bs-slide="next"
+              aria-label="Next slide"
+            >
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

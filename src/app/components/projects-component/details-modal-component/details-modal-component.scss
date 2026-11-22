@@ -1,0 +1,205 @@
+.modal-content {
+  color: var(--color-ink);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px #0f172a3d;
+}
+
+.modal-dialog {
+  width: calc(100% - 2rem);
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-color: var(--color-border);
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  line-height: 1.7;
+}
+
+.carousel-item {
+  h5,
+  h6 {
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.feature-list {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: 0.8rem 1rem 0.8rem 2.7rem;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: var(--color-page);
+    color: var(--color-ink);
+
+    &::before {
+      content: '\2713';
+      position: absolute;
+      left: 1rem;
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+  }
+}
+
+.technology-tag {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  background: var(--color-page);
+  color: var(--color-ink);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.modal-footer .btn {
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.modal-footer .btn-secondary {
+  color: var(--color-ink);
+  background-color: var(--color-page);
+  border: 1px solid var(--color-border);
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: var(--color-border);
+}
+
+// Keep the dialog's content area steady while the carousel changes slides.
+#projectCarousel .carousel-inner {
+  height: min(55vh, 440px);
+  min-height: 280px;
+}
+
+#projectCarousel .carousel-item {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: var(--color-primary) var(--color-page);
+  scrollbar-width: thin;
+}
+
+#projectCarousel .carousel-item::-webkit-scrollbar {
+  width: 8px;
+}
+
+#projectCarousel .carousel-item::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background-color: var(--color-page);
+}
+
+#projectCarousel .carousel-item::-webkit-scrollbar-thumb {
+  border: 2px solid var(--color-page);
+  border-radius: 999px;
+  background-color: var(--color-primary);
+}
+
+#projectCarousel .carousel-item::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-dark);
+}
+
+#projectCarousel .ratio {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+#projectCarousel video {
+  max-height: min(55vh, 405px);
+  object-fit: contain;
+  background: #000;
+}
+
+.carousel-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+
+  &__btn {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+
+    background-color: transparent;
+    color: var(--color-ink);
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+      background-color: var(--color-page);
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modal-header,
+  .modal-footer {
+    padding: 0.875rem 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  #projectCarousel .carousel-inner {
+    height: min(55vh, 360px);
+    min-height: 240px;
+  }
+
+  #projectCarousel .ratio {
+    width: 100%;
+  }
+
+  #projectCarousel video {
+    max-height: 35vh;
+  }
+}

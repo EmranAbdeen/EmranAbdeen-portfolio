@@ -1,0 +1,91 @@
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <a href="#home" class="header__logo-link" (click)="selectSection_closeMenu('home')"
+        >Emran Abdeen</a
+      >
+    </div>
+    <button
+      class="header__toggle"
+      type="button"
+      aria-controls="primary-navigation"
+      (click)="menuOpen = !menuOpen"
+    >
+      <i [class]="menuOpen ? 'bi bi-x-lg' : 'bi bi-list'"></i>
+    </button>
+    <nav class="header__nav" [class.header__nav--open]="menuOpen" id="primary-navigation">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <!-- location: قيمة جاهزة ومحددة ضمن معايير HTML Accessibility (aria-current) -->
+          <a
+            href="#home"
+            (click)="selectSection_closeMenu('home')"
+            class="header__nav-link"
+            [class.header__nav-link--active]="activeSection === 'home'"
+            [attr.aria-current]="activeSection === 'home' ? 'location' : null"
+            >Home</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a
+            href="#about"
+            (click)="selectSection_closeMenu('about')"
+            class="header__nav-link"
+            [class.header__nav-link--active]="activeSection === 'about'"
+            [attr.aria-current]="activeSection === 'about' ? 'location' : null"
+            >About</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a
+            href="#skills"
+            (click)="selectSection_closeMenu('skills')"
+            class="header__nav-link"
+            [class.header__nav-link--active]="activeSection === 'skills'"
+            [attr.aria-current]="activeSection === 'skills' ? 'location' : null"
+            >Skills</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a
+            href="#experience"
+            (click)="selectSection_closeMenu('experience')"
+            class="header__nav-link"
+            [class.header__nav-link--active]="activeSection === 'experience'"
+            [attr.aria-current]="activeSection === 'experience' ? 'location' : null"
+            >Experience</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a
+            href="#projects"
+            (click)="selectSection_closeMenu('projects')"
+            class="header__nav-link"
+            [class.header__nav-link--active]="activeSection === 'projects'"
+            [attr.aria-current]="activeSection === 'projects' ? 'location' : null"
+            >Projects</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a
+            data-bs-toggle="modal"
+            data-bs-target="#contactModal"
+            (click)="selectSection_closeMenu('contact')"
+            class="header__nav-link"
+            [class.header__nav-link--active]="activeSection === 'contact'"
+            [attr.aria-current]="activeSection === 'contact' ? 'location' : null"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <button
+      class="header__theme-toggle"
+      type="button"
+      (click)="toggleTheme()"
+      [attr.title]="darkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+    >
+      <i [class]="darkMode ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill'"></i>
+    </button>
+  </div>
+</header>

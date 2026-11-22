@@ -1,0 +1,38 @@
+<section class="projects container" data-aos="fade-up" data-aos-delay="200" id="projects">
+  <div class="projects__container">
+    <h2 class="projects__title">Projects</h2>
+    <ul class="projects__list">
+      @for (project of projects; track project.Id) {
+        <li class="projects__item">
+          <img [src]="project.Image" [alt]="project.Title" class="projects__image" />
+          <h3 class="projects__item-title">{{ project.Title }}</h3>
+          <p class="projects__item-description">{{ project.Description }}</p>
+          <div class="projects__technologies">
+            @for (tech of project.Technologies; track tech) {
+              <span class="badge text-bg-primary">{{ tech }}</span>
+            }
+          </div>
+          <div class="projects__actions">
+            <button
+              type="button"
+              class="btn btn-primary mt-3"
+              (click)="selectedProject(project)"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+            >
+              Details
+            </button>
+            <a
+              [href]="project.Github"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-primary mt-3"
+            >
+              Source Code
+            </a>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

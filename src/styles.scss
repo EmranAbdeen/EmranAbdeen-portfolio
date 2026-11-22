@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// bootstrap
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+// AOS animation styles
+@import 'aos/dist/aos.css';
+
+:root {
+  color-scheme: light;
+  --header-height: 82px;
+  --color-primary: #0ea5e9;
+  --color-primary-dark: #075985;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-surface: #ffffff;
+  --color-page: #f1f5f9;
+  --color-border: #dbe4ee;
+  --selection-background: #a7f3d0;
+  --selection-color: #065f46;
+  --box-shadow: #219af0e1;
+  --color-header: #395a9c;
+  --header-accent: #7dd3fc;
+  --hero-background: linear-gradient(135deg, #ffffff 10%, #6394d3 68%, #8baad3 100%);
+  --hero-text: #0f172a;
+  --hero-copy: #475569;
+  --hero-highlight: #075985;
+  --button-primary-background: #075985;
+  --button-primary-color: #ffffff;
+  --button-primary-hover: #0369a1;
+  --button-outline-color: #075985;
+  --hero-border: #bfdbfe;
+  --bs-primary: #0369a1;
+  --bs-primary-rgb: 3, 105, 161;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-primary: #38bdf8;
+  --color-primary-dark: #26c2d3;
+  --color-ink: #f1f5f9;
+  --color-muted: #cbd5e1;
+  --color-surface: #1e293b;
+  --color-page: #0f172a;
+  --color-border: #334155;
+  --selection-background: #047857;
+  --selection-color: #ecfdf5;
+  --box-shadow: transparent;
+  --color-header: #020617;
+  --header-accent: #38bdf8;
+  --hero-background: linear-gradient(135deg, #0b1220 0%, #172554 58%, #075985 100%);
+  --hero-text: #f8fafc;
+  --hero-copy: #cbd5e1;
+  --hero-highlight: #7dd3fc;
+  --button-primary-background: #7dd3fc;
+  --button-primary-color: #082f49;
+  --button-primary-hover: #38bdf8;
+  --button-outline-color: #7dd3fc;
+  --hero-border: rgba(148, 163, 184, 0.2);
+  --bs-primary: #0369a1;
+  --bs-primary-rgb: 3, 105, 161;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  color: var(--color-ink);
+  background: var(--color-page);
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 0.5rem);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 68px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  color: var(--selection-color);
+  background-color: var(--selection-background);
+}
